@@ -1,0 +1,222 @@
+/* BACKGROUND */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+  background: #0f172a;
+}
+
+/* PARTICLES BACKGROUND */
+.bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top, #1e293b, #0b1220);
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* FLOATING DOTS */
+.particles::before,
+.particles::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 2px);
+  background-size: 50px 50px;
+  animation: moveParticles 20s linear infinite;
+}
+
+@keyframes moveParticles {
+  from { transform: translateY(0); }
+  to { transform: translateY(-100px); }
+}
+
+/* MAIN LAYOUT */
+.main {
+  display: flex;
+  height: 100vh;
+}
+
+/* LEFT SIDE */
+.left {
+  flex: 1;
+  padding: 90px;
+  color: white;
+}
+
+/* BRAND */
+.brand {
+  font-size: 45px;
+  background: linear-gradient(90deg, #ff6f3c, #22c55e, #3b82f6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: fadeDown 1s ease;
+}
+
+/* TYPING EFFECT */
+.typing {
+  font-size: 20px;
+  color: #cbd5e1;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #ff6f3c;
+  width: 0;
+  animation: typing 4s steps(40) forwards, blink 0.8s infinite;
+}
+
+/* DESCRIPTION */
+.desc {
+  margin-top: 20px;
+  color: #94a3b8;
+  max-width: 400px;
+}
+
+/* LOGIN CARD */
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 340px;
+  padding: 30px;
+
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(20px);
+
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.1);
+
+  text-align: center;
+
+  box-shadow: 0 0 40px rgba(255,111,60,0.2);
+
+  animation: fadeIn 1s ease;
+}
+
+/* INPUTS */
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+
+  border-radius: 10px;
+  border: none;
+
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+/* BUTTON */
+button {
+  width: 100%;
+  padding: 12px;
+
+  background: linear-gradient(90deg, #ff6f3c, #ffb347);
+  border: none;
+  border-radius: 10px;
+
+  font-weight: bold;
+  color: white;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* HOVER */
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255,111,60,0.5);
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* TYPING KEYFRAME */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* BLINK CURSOR */
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+p {
+  color: white;
+}
+
+span {
+  color: #ffb347;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+span:hover {
+  text-decoration: underline;
+}
+select {
+  color: white;
+}
+
+select option {
+  background: #1e293b;
+  color: white;
+}
+
+.login-title {
+
+  font-size: 32px;
+  font-weight: bold;
+
+  margin-bottom: 20px;
+
+  background: linear-gradient(
+    90deg,
+    #ff6f3c,
+    #ffb347,
+    #22c55e
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 0 0 20px rgba(255,111,60,0.3);
+
+  animation: fadeDown 1s ease;
+}
+.card:hover {
+
+  transform: translateY(-5px);
+
+  transition: 0.3s ease;
+
+  box-shadow: 0 0 30px rgba(255,111,60,0.3);
+}
+
+.login-subtitle {
+
+  margin-top: -10px;
+  margin-bottom: 20px;
+
+  color: #cbd5e1;
+
+  font-weight: 400;
+
+  letter-spacing: 1px;
+}

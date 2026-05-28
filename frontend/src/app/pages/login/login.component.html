@@ -1,0 +1,83 @@
+<div class="bg">
+
+  <!-- FLOATING PARTICLES -->
+  <div class="particles"></div>
+
+</div>
+
+<div class="main">
+
+  <!-- LEFT SECTION -->
+  <div class="left">
+
+    <h1 class="brand">
+      Smart Access Management 🚀
+    </h1>
+
+    <h2 class="typing">
+      Secure • Fast • Modern Access Control System
+    </h2>
+
+    <p class="desc">
+      Enterprise-grade authentication system with role-based access and JWT security.
+    </p>
+
+  </div>
+
+  <!-- RIGHT LOGIN CARD -->
+  <div class="right">
+
+    <div class="card">
+
+     <h2 class="login-title">
+  Welcome Back 👋
+</h2>
+
+<h4 class="login-subtitle">
+  Login to Your Account
+</h4>
+
+      <input type="text" placeholder="User ID" [(ngModel)]="userId">
+
+      <input type="password" placeholder="Password" [(ngModel)]="password">
+
+    <select [(ngModel)]="role">
+
+  <option value="">
+    Select Role
+  </option>
+
+  <option value="Admin">
+    Admin
+  </option>
+
+  <option value="General User">
+    General User
+  </option>
+
+</select>
+
+      <button (click)="login()">Access System</button>
+
+      <p>
+
+  Don't have an account?
+
+  <span routerLink="/signup">
+    Sign Up
+  </span>
+
+</p>
+<p
+  class="forgot-password"
+  routerLink="/forgot-password"
+>
+
+  Forgot Password?
+
+</p>
+    </div>
+
+  </div>
+
+</div>

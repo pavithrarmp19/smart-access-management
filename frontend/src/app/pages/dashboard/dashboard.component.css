@@ -1,0 +1,201 @@
+/* BACKGROUND */
+.bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(135deg, #0f172a, #1e293b, #0b1220);
+  z-index: -1;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 30px;
+
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+
+  color: white;
+}
+
+.logo {
+  color: #ff6f3c;
+}
+
+/* LOGOUT BUTTON */
+.logout {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+
+  background: #ff6f3c;
+  color: white;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255,111,60,0.4);
+}
+
+/* CONTAINER */
+.container {
+  padding: 30px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* CARDS */
+.card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(15px);
+
+  border-radius: 15px;
+  padding: 20px;
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  color: white;
+}
+
+/* USER CARD */
+.user-card {
+  width: 250px;
+}
+
+/* TABLE CARD */
+.table-card {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  color: #cbd5e1;
+}
+
+th {
+  color: white;
+}
+/* LOADER */
+.loader-container {
+
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+}
+
+.loader {
+
+  width: 60px;
+  height: 60px;
+
+  border: 6px solid rgba(255,255,255,0.2);
+
+  border-top: 6px solid #ff6f3c;
+
+  border-radius: 50%;
+
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* ADMIN PANEL */
+.admin-panel {
+
+  margin-top: 30px;
+  text-align: center;
+}
+
+.admin-panel h2 {
+
+  color: #ffb347;
+  margin-bottom: 20px;
+}
+
+.admin-panel button {
+
+  margin: 10px;
+  padding: 12px 20px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: linear-gradient(
+    90deg,
+    #ff6f3c,
+    #ffb347
+  );
+
+  color: white;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.admin-panel button:hover {
+
+  transform: scale(1.05);
+
+  box-shadow: 0 0 20px rgba(255,111,60,0.4);
+}
+.loader-container {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  background: #0f172a;
+
+  z-index: 9999;
+
+  color: white;
+}
+.card:hover {
+
+  transform: translateY(-5px);
+
+  transition: 0.3s ease;
+
+  box-shadow: 0 0 30px rgba(255,111,60,0.3);
+}

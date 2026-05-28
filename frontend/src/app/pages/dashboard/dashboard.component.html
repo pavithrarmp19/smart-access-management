@@ -1,0 +1,90 @@
+<div *ngIf="loading" class="loader-container">
+
+  <div class="loader"></div>
+
+  <p>Loading Dashboard...</p>
+
+</div>
+
+<div *ngIf="!loading">
+
+  <!-- BG -->
+  <div class="bg"></div>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+
+    <h2 class="logo">Smart Access</h2>
+
+    <div class="nav-right">
+
+      <span>Welcome, {{ user?.userId }}</span>
+
+      <button class="logout" (click)="logout()">
+        Logout
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- DASHBOARD -->
+  <div class="container">
+
+    <!-- USER CARD -->
+    <div class="card user-card">
+
+      <h3>User Info</h3>
+
+      <p><b>User ID:</b> {{ user?.userId }}</p>
+      <p><b>Role:</b> {{ role }}</p>
+
+    </div>
+
+    <!-- TABLE -->
+    <div class="card table-card">
+
+      <h3>Access Records</h3>
+
+      <table>
+
+        <thead>
+          <tr>
+            <th>User ID</th>
+            <th>Role</th>
+            <th>Access</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr *ngFor="let record of records">
+            <td>{{ record.userId }}</td>
+            <td>{{ record.role }}</td>
+            <td>{{ record.access }}</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+      <!-- ADMIN PANEL -->
+      <div *ngIf="role === 'Admin'" class="admin-panel">
+
+        <h2>Admin Controls</h2>
+
+        <button (click)="addUser()">
+          Add User
+        </button>
+
+        <button (click)="deleteUser()">
+          Delete User
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
