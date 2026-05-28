@@ -24,7 +24,7 @@ cd frontend
 
 npm install
 
-ng serve
+npx ng serve
 
 ### Backend
 cd backend
