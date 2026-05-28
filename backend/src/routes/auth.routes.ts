@@ -128,4 +128,42 @@ router.get("/clear-users", async (req, res) => {
   });
 
 });
+
+
+router.post("/reset-password", async (req, res) => {
+
+  const { userId, newPassword } = req.body;
+
+  try {
+
+    const user = await User.findOne({ userId });
+
+    if (!user) {
+      return res.json({
+        success: false,
+        message: "User not found"
+      });
+    }
+
+    const hashedPassword = await bcrypt.hash(newPassword, 10);
+
+    user.password = hashedPassword;
+
+    await user.save();
+
+    return res.json({
+      success: true,
+      message: "Password Updated Successfully"
+    });
+
+  } catch (error) {
+
+    console.log(error);
+
+    return res.json({
+      success: false,
+      message: "Server Error"
+    });
+  }
+});
 export default router;

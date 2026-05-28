@@ -1,4 +1,3 @@
-// Fallback users list to avoid missing module '../data/users'
 const users = [
   {
     userId: "admin",
