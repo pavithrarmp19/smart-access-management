@@ -21,12 +21,16 @@ Security: JWT, bcrypt
 
 ### Frontend
 cd frontend
+
 npm install
+
 ng serve
 
 ### Backend
 cd backend
+
 npm install
+
 npx ts-node src/app.ts
 
 ## URLs
